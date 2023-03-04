@@ -1,9 +1,8 @@
 # w251_hw8
 
-Let us use the DETR network we used in the lab
-Annotate ~120-150 images
-Look for large objects, e.g. the file like 2021-06-13_19-22-13-front.mp4
-Create at least two classes. Recommended: 'Car' and 'SUV'
-Feel free to use MakeSense AI or Roboflow.Make sure your annotations are (or converted to) the coco format.
-Recommended: use Active Learning
+Using ffmpeg, i took a screenshot of the tesla cam every 5 seconds which left me with 152 images. I annotaded these images with 'car', 'truck', 'suv' using roboflow with their active learning feature to make the annotation go by significantly faster. There were too many pickup trucks in the images to not included that as a class. These broke down into 106 training images, 30 validation images, and 16 test images. The images for all three groupings and three classes can be found in the zip file in this git repo or in my public roboflow project here: https://app.roboflow.com/w251-8f2at/hw8-gnmlo/1
+
+
+
+
 Train for as many epochs as needed to cross the 0.4 IoU=0.50:0.95
