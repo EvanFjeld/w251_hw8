@@ -1,0 +1,7 @@
+for file in videos/*.mp4; do
+  ffmpeg -i "$file" -frames:v 100 -r .1 tesla_images/$(basename "${file%.*}")-%04d.jpg
+done
+
+zip -r tesla_images.zip tesla_images
+
+docker cp \optimistic_chatterjee:/data/tesla_images.zip ~/Documents/MIDS/w251/homework/hw8
